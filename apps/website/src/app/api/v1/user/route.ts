@@ -1,8 +1,7 @@
 import dayjs from 'dayjs';
 import { NextRequest, NextResponse } from 'next/server';
 
-import { ApiError, setMeta } from '@/lib/utils';
-import { revalidatePaths } from '@/lib/utils/cache';
+import { ApiError, revalidatePaths, setMeta } from '@/lib/utils';
 import { authorize } from '@/queries/server/auth';
 import { getUserAPI } from '@/queries/server/users';
 import { createAdminClient, createClient } from '@/supabase/server';

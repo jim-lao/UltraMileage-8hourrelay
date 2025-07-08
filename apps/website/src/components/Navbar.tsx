@@ -1,14 +1,14 @@
 'use client';
-import { useAuth } from '@/hooks';
-import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
+import { useAuth } from '@/hooks';
 
 const navigation = [
   { name: 'The Event', href: '/#root' },
   { name: 'Mission', href: '/#ourMission' },
   { name: 'RULES', href: '/#rules' },
-  // { name: 'Volunteering', href: '/#volunteering' },
-  // { name: 'Sponsorship', href: '/#sponsorship' },
+  { name: 'Volunteering', href: '/#volunteering' },
+  { name: 'Sponsorship', href: '/#sponsorship' },
   { name: 'Registration', href: '/registration' },
   { name: 'teams', href: '/teams' },
 ];
@@ -26,17 +26,11 @@ const Navbar = ({ changeBg }: { changeBg: boolean }) => {
       <div className="logo">
         <a href="/">
           <span className="sr-only">8 Hour Relay</span>
-          <img src="/img/logo_white.svg" alt="8 Hour Relay Logo" />
+          <img src="/img/logo_white.svg" />
         </a>
       </div>
       <nav className="mobile-menu">
-        <label
-          htmlFor="show-menu"
-          className="show-menu"
-          aria-label="Toggle navigation menu"
-          role="button"
-          tabIndex={0}
-        >
+        <label htmlFor="show-menu" className="show-menu">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -44,7 +38,6 @@ const Navbar = ({ changeBg }: { changeBg: boolean }) => {
             strokeWidth={1.5}
             stroke="currentColor"
             className="h-6 w-6"
-            aria-hidden="true"
           >
             <path
               strokeLinecap="round"

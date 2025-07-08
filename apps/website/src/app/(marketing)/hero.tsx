@@ -1,18 +1,20 @@
 'use client';
 
-import Link from 'next/link';
 import { Suspense } from 'react';
+import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 
-import Loading from '@/components/Loading';
 import Navbar from '@/components/Navbar';
-import { siteConfig } from '@/config/site';
-import ShiftingCountdown from './_components/CountDownComponent';
+import TimeCard from './_components/TimeCard';
+import Loading from '@/components/Loading';
 import HeroImage from './_components/HeroImage';
+import ShiftingCountdown from './_components/CountDownComponent';
 
 export default function HeroSection() {
   // intersection observer to handle navbar change background
-  const { ref, inView } = useInView({ threshold: 0.3 });
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+  });
 
   return (
     <>
@@ -22,7 +24,7 @@ export default function HeroSection() {
       <div className="hero-section relative" ref={ref}>
         <HeroImage />
         <div className="hero-text content-container small relative z-10">
-          <h1>{siteConfig.event.time}</h1>
+          <h1>Sept 7 2024</h1>
           <div className="countdown">count down to the event</div>
           <Suspense fallback={<Loading />}>
             <ShiftingCountdown />
@@ -40,7 +42,7 @@ export default function HeroSection() {
         </div>
       </div>
       {!inView && (
-        <div className="nav-link top transition-opacity duration-900">
+        <div className="nav-link top duration-900 transition-opacity">
           <Link href="#root">
             <svg
               xmlns="http://www.w3.org/2000/svg"
