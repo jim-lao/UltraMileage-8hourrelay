@@ -6,8 +6,7 @@ import MissionSection from './mission';
 import RulesSection from './rules';
 import VolunteeringSection from './volunteering';
 
-import '@/styles/form.css';
-import './landing.css';
+import '@/styles/landing.css';
 
 export default async function Web() {
   return (
@@ -17,7 +16,7 @@ export default async function Web() {
       <MarkCalendarSection />
       <MissionSection />
       <RulesSection />
-      <VolunteeringSection />
+      {/*<VolunteeringSection />*/}
       <GallerySection />
       <div className="keep-in-touch">
         <div className="landing-section-title">Keep in touch</div>
