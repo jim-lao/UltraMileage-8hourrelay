@@ -9,13 +9,17 @@ export default function MarkCalendarSection() {
           <div className="label">Team Fee</div>
           <div className="fee-container">
             <div className="fee1">
-              <div className="fee">$320</div>
               <div className="category">ULTRA</div>
+              <div className="fee">$320</div>
+              
             </div>
             <div className="fee2">
-              <div className="fee">$450/$550</div>
-              <div className="category">&lt;= 12 / &gt; 12</div>
               <div className="category">MASTER</div>
+              <div className="fee">$450 <span className="slash">/</span>$550</div>
+              <div className="sizing">
+                <div>&lt;= 12</div>
+                <div>&gt; 12</div>
+              </div>
             </div>
           </div>
         </div>
@@ -25,7 +29,7 @@ export default function MarkCalendarSection() {
           <div className="value">
             8:00am – 4:00pm
             <br />
-            September 13, 2025
+            Sep. 13, 2025
           </div>
         </div>
         <div className="event-info-item">
@@ -40,7 +44,7 @@ export default function MarkCalendarSection() {
         </div>
         <div className="event-info-item">
           <div className="label">Entry Deadline</div>
-          <div className="value">Sep 07, 2025</div>
+          <div className="value">Sep. 07, 2025</div>
         </div>
       </section>
     </section>
